@@ -1,36 +1,59 @@
-example:
-https://vdgsecurity.com/kb/dewarping/
+# Video Dewarping Tool
 
-remap:
-https://docs.opencv.org/2.4/modules/imgproc/doc/geometric_transformations.html?highlight=remap#void remap(InputArray src, OutputArray dst, InputArray map1, InputArray map2, int interpolation, int borderMode, const Scalar& borderValue)
+이 프로젝트는 어안렌즈로 촬영된 영상을 평활화 하는 툴 입니다. 이미지를 입력으로 받아서 주어진 해상도로 변환하여 저장합니다.
 
-about fisheye:
-http://paulbourke.net/dome/fish2/
-https://github.com/gerardobort/ofxStereoCam180/blob/master/src/fisheye.cpp
+## Features
 
-matrix:
-http://www.opengl-tutorial.org/kr/beginners-tutorials/tutorial-3-matrices/
+- 어안 영상 평활화
+- 어안렌즈 중심, 지름, 사이즈 옵션 조절 가능
 
-vector:
-https://www.google.co.kr/search?q=%EB%B2%A1%ED%84%B0%EC%9D%98+x%EC%B6%95+y%EC%B6%95+%ED%9A%8C%EC%A0%84%EA%B0%81&tbm=isch&source=iu&ictx=1&fir=6LoZGth829DzDM%253A%252C1zdhA_7G1KGdUM%252C_&usg=AI4_-kRNCXdmuLs8xSK7FcUzQRNzizIlJw&sa=X&ved=2ahUKEwis3NTl07fgAhUVFYgKHfDdD78Q9QEwA3oECAQQBg#imgrc=6LoZGth829DzDM:
+## Requirements
 
-https://blog.naver.com/mindo1103/90103361104
+- C++17 이상
+- OpenCV 4.x 이상
 
-http://blog.naver.com/PostView.nhn?blogId=ccc9599&logNo=120057995555
+## Installation
 
-https://darkpgmr.tistory.com/81
+1. **레포지토리 복사:**
 
-https://darkpgmr.tistory.com/121
+    ```sh
+    git clone https://github.com/ufxpri/fisheye-to-sphere-projection.git
+    cd fisheye-to-sphere-projection
+    ```
 
-https://rfriend.tistory.com/tag/외적
+2. **의존성 설치:**
 
+   OpenCV가 설치되어 있는지 확인해주세요. 직접 빌드한 파일또한 사용 가능합니다.
 
-star:
+   For Ubuntu:
+   
+   ```sh
+   sudo apt-get update
+   sudo apt-get install libopencv-dev
+   ```
 
-http://blog.yeezia.com/?post=91
-http://rapapa.net/?p=2601
+   For Windows
+   사전 빌드된 파일을 설치하여 사용 가능합니다. [OpenCV 공식 사이트](https://opencv.org/).
 
+3. **프로젝트 빌드:**
 
-parking space:
-https://vgg.fiit.stuba.sk/2016-06/free-parking-spots-detection/
-https://www.slideshare.net/AmanullahTariq/parking-space-detect-70787242
+   CMake 사용시:
+
+   ```sh
+   mkdir build
+   cd build
+   cmake ..
+   make
+   ```
+
+## Usage
+
+빌드 후에 다음과 같이 사용할 수 있습니다:
+
+```sh
+./dewarp_image.exe -i fisheye.jpg -o flat.jpg
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
