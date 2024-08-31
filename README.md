@@ -54,8 +54,7 @@
 ./dewarp_image.exe -i fisheye.jpg -o flat.jpg
 ./dewarp_image.exe -i fisheye.jpg -cw 1208 -ch 1188 -t 0.25 -p 0.0 -f 0.3 -rw 250 -rh 250 -o flat2.jpg
 ```
-![original](https://github.com/ufxpri/fisheye-to-sphere-projection/blob/main/fisheye.jpg?raw=true | width=100)
-![flat](https://github.com/ufxpri/fisheye-to-sphere-projection/blob/main/flat.jpg?raw=true =100x100)
+![compare](https://github.com/user-attachments/assets/001dd180-df45-4c1c-9f31-244d04a00d4b)
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
